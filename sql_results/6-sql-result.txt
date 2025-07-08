@@ -1,0 +1,39 @@
+id,department_id,name,level,address,email,website
+5,1,"Corso di Laurea Magistrale in Biologia evoluzionistica",magistrale,"Contrada Fiore 253",biologia-evoluzionistica@uni.it,www.biologia-evoluzionistica.uni.it
+6,1,"Corso di Laurea Magistrale in Biologia marina",magistrale,"Via Colombo 378 Piano 9",biologia-marina@uni.it,www.biologia-marina.uni.it
+7,1,"Corso di Laurea Magistrale in Biologia molecolare",magistrale,"Strada Armando 86 Piano 9",biologia-molecolare@uni.it,www.biologia-molecolare.uni.it
+8,1,"Corso di Laurea Magistrale in Biologia sanitaria",magistrale,"Contrada Osvaldo 497 Piano 5",biologia-sanitaria@uni.it,www.biologia-sanitaria.uni.it
+9,1,"Corso di Laurea Magistrale in Biotecnologie industriali",magistrale,"Rotonda Tommaso 806 Appartamento 21",biotecnologie-industriali@uni.it,www.biotecnologie-industriali.uni.it
+10,1,"Corso di Laurea Magistrale in Scienze della natura",magistrale,"Strada Negri 323",scienze-della-natura@uni.it,www.scienze-della-natura.uni.it
+13,2,"Corso di Laurea Magistrale in Astronomia",magistrale,"Via Samira 39",astronomia@uni.it,www.astronomia.uni.it
+14,2,"Corso di Laurea Magistrale in Fisica",magistrale,"Piazza Nathan 77 Piano 2",fisica@uni.it,www.fisica.uni.it
+18,3,"Corso di Laurea Magistrale in Ingegneria Civile",magistrale,"Contrada Moretti 163",ingegneria-civile@uni.it,www.ingegneria-civile.uni.it
+23,4,"Corso di Laurea Magistrale in Bioingegneria",magistrale,"Contrada Sibilla 626",bioingegneria@uni.it,www.bioingegneria.uni.it
+24,4,"Corso di Laurea Magistrale in Ingegneria dell'Automazione",magistrale,"Strada Ippolito 684",ingegneria-dellautomazione@uni.it,www.ingegneria-dellautomazione.uni.it
+25,4,"Corso di Laurea Magistrale in Ingegneria Elettronica",magistrale,"Piazza Neri 862",ingegneria-elettronica@uni.it,www.ingegneria-elettronica.uni.it
+26,4,"Corso di Laurea Magistrale in Ingegneria Informatica",magistrale,"Via Milani 9",ingegneria-informatica@uni.it,www.ingegneria-informatica.uni.it
+27,4,"Corso di Laurea Magistrale in Cybersecurity",magistrale,"Piazza Quasimodo 14",cybersecurity@uni.it,www.cybersecurity.uni.it
+30,5,"Corso di Laurea Magistrale in Matematica",magistrale,"Piazza Demis 53 Appartamento 68",matematica@uni.it,www.matematica.uni.it
+31,5,"Corso di Laurea Magistrale in Informatica",magistrale,"Incrocio Eustachio 253 Appartamento 90",informatica@uni.it,www.informatica.uni.it
+36,6,"Corso di Laurea Magistrale in Scienze delle Professioni Sanitarie",magistrale,"Via D'angelo 9 Piano 8",scienze-delle-professioni-sanitarie@uni.it,www.scienze-delle-professioni-sanitarie.uni.it
+37,6,"Corso di Laurea Magistrale in Scienze e Tecniche dell'Attività Motoria Preventiva e Adattata",magistrale,"Contrada Sala 9",scienze-e-tecniche-dellattivita-motoria-preventiva-e-adattata@uni.it,www.scienze-e-tecniche-dellattivita-motoria-preventiva-e-adattata.uni.it
+44,7,"Corso di Laurea Magistrale in Odontoiatria e Protesi Dentaria",magistrale,"Via Mariani 185",odontoiatria-e-protesi-dentaria@uni.it,www.odontoiatria-e-protesi-dentaria.uni.it
+49,8,"Corso di Laurea Magistrale in Chimica",magistrale,"Strada Soriana 951",chimica@uni.it,www.chimica.uni.it
+50,8,"Corso di Laurea Magistrale in Chimica Industriale",magistrale,"Incrocio Gatti 16",chimica-industriale@uni.it,www.chimica-industriale.uni.it
+51,8,"Corso di Laurea Magistrale in Scienza dei Materiali",magistrale,"Contrada Piccarda 7",scienza-dei-materiali@uni.it,www.scienza-dei-materiali.uni.it
+52,8,"Corso di Laurea Magistrale in Scienze e Tecnologie per l'Ambiente",magistrale,"Rotonda Ferrari 38",scienze-e-tecnologie-per-lambiente@uni.it,www.scienze-e-tecnologie-per-lambiente.uni.it
+54,9,"Corso di Laurea Magistrale in Business Administration",magistrale,"Rotonda Valentini 49",business-administration@uni.it,www.business-administration.uni.it
+55,9,"Corso di Laurea Magistrale in Economics and Finance",magistrale,"Strada Sanna 652",economics-and-finance@uni.it,www.economics-and-finance.uni.it
+56,9,"Corso di Laurea Magistrale in Entrepreneurship and Innovation",magistrale,"Strada Ludovico 8",entrepreneurship-and-innovation@uni.it,www.entrepreneurship-and-innovation.uni.it
+57,9,"Corso di Laurea Magistrale in Economia e Diritto",magistrale,"Incrocio Joseph 585 Piano 7",economia-e-diritto@uni.it,www.economia-e-diritto.uni.it
+61,10,"Corso di Laurea Magistrale in European and Global Studies",magistrale,"Incrocio Orlando 731",european-and-global-studies@uni.it,www.european-and-global-studies.uni.it
+62,10,"Corso di Laurea Magistrale in Human Rights and Multi-Level Governance",magistrale,"Contrada Marina 10",human-rights-and-multi-level-governance@uni.it,www.human-rights-and-multi-level-governance.uni.it
+63,10,"Corso di Laurea Magistrale in Innovazione e Servizio Sociale",magistrale,"Incrocio Lombardi 6 Appartamento 60",innovazione-e-servizio-sociale@uni.it,www.innovazione-e-servizio-sociale.uni.it
+64,10,"Corso di Laurea Magistrale in Relazioni Internazionali e Diplomazia",magistrale,"Incrocio Milani 70 Appartamento 93",relazioni-internazionali-e-diplomazia@uni.it,www.relazioni-internazionali-e-diplomazia.uni.it
+65,10,"Corso di Laurea Magistrale in Scienze del Governo e Politiche Pubbliche",magistrale,"Strada De Angelis 419",scienze-del-governo-e-politiche-pubbliche@uni.it,www.scienze-del-governo-e-politiche-pubbliche.uni.it
+68,11,"Corso di Laurea Magistrale in Scienze Statistiche",magistrale,"Strada Russo 97",scienze-statistiche@uni.it,www.scienze-statistiche.uni.it
+71,12,"Corso di Laurea Magistrale in Filologia Moderna",magistrale,"Strada Sartori 45",filologia-moderna@uni.it,www.filologia-moderna.uni.it
+72,12,"Corso di Laurea Magistrale in Lingue e Letterature Europee e Americane",magistrale,"Strada Nathan 6 Appartamento 73",lingue-e-letterature-europee-e-americane@uni.it,www.lingue-e-letterature-europee-e-americane.uni.it
+73,12,"Corso di Laurea Magistrale in Lingue Moderne per la Comunicazione e la Cooperazione Internazionale",magistrale,"Incrocio Donatella 72 Appartamento 53",lingue-moderne-per-la-comunicazione-e-la-cooperazione-internazionale@uni.it,www.lingue-moderne-per-la-comunicazione-e-la-cooperazione-internazionale.uni.it
+74,12,"Corso di Laurea Magistrale in Linguistica",magistrale,"Strada Pellegrino 3 Appartamento 85",linguistica@uni.it,www.linguistica.uni.it
+75,12,"Corso di Laurea Magistrale in Strategie di Comunicazione",magistrale,"Strada Gentile 493",strategie-di-comunicazione@uni.it,www.strategie-di-comunicazione.uni.it

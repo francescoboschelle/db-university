@@ -1,3 +1,7 @@
+-- Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
+SELECT * FROM teachers WHERE phone IS NULL
+
 id,name,surname,phone,email,office_address,office_number
 2,Gianantonio,Battaglia,NULL,grizzi@costa.it,"Incrocio Marini 9",28
 3,Erminia,Gatti,NULL,morelli.marina@libero.it,"Strada Vitali 8 Piano 0",87

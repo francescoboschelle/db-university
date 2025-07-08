@@ -1,3 +1,7 @@
+-- Selezionare tutti gli studenti che hanno più di 30 anni
+
+SELECT * FROM students WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30;
+
 id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_number,email
 1,61,Antonio,D'angelo,1972-08-31,QPXVYW51Z02T871B,2019-02-21,620033,lbellini@sorrentino.it
 2,44,Nico,Bianco,1983-12-15,QJGUPY60I48P579X,2018-11-15,620034,mercedes.conte@yahoo.com
@@ -37,7 +41,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 46,64,Bibiana,"De luca",1978-12-20,FHGYFK08F70Z360M,2020-11-17,620078,vania40@mariani.net
 47,57,Claudia,Carbone,1986-08-18,EHDPWC79I51T535Q,2019-04-18,620079,apalumbo@email.it
 49,36,Laura,Farina,1972-09-08,IQYIIJ04N80W772J,2021-05-10,620081,rizzo.lauro@hotmail.com
-52,38,Rosita,Pellegrino,1994-12-20,TGDGNX56A45B073T,2021-04-05,620084,fontana.patrizio@email.it
 55,4,Lauro,Vitale,1990-01-30,BWOQAH56L35A201P,2018-10-22,620087,baldassarre.mancini@dangelo.com
 56,10,Radames,Villa,1993-10-01,ZHOAGL29P79F782W,2020-05-17,620088,ineri@ferri.com
 57,53,Doriana,Benedetti,1978-03-22,QSFGPL05R66U759U,2019-05-01,620089,ofarina@montanari.it
@@ -46,7 +49,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 60,42,Furio,Lombardo,1979-10-19,ZFYESS50Q28L944J,2020-01-08,620092,rudy.benedetti@gmail.com
 61,32,Nunzia,Conte,1973-04-02,ENFYCX74A61P552J,2021-06-04,620093,patrizio64@libero.it
 62,28,Timoteo,Rizzo,1972-05-05,IFTDJG04H70U262P,2020-01-10,620094,ricci.gerlando@carbone.org
-64,46,Trevis,Riva,1994-11-15,NCYXDQ91O77C416E,2019-08-15,620096,sorrentino.alan@longo.com
 66,66,Noah,Marini,1985-06-30,HKYPOE81Y94Q502B,2020-07-26,620098,michele.fabbri@hotmail.com
 68,40,Diamante,Gallo,1984-10-11,BOOBOT54R83I512Y,2021-04-30,620100,nmariani@email.it
 69,12,Augusto,Testa,1985-07-08,ATSROU50R77U065K,2019-12-08,620101,osvaldo76@marchetti.it
@@ -72,7 +74,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 94,12,Jarno,Romano,1975-02-05,HUIZMJ30O35E155G,2021-02-09,620126,loris53@marini.it
 98,21,Donatella,Silvestri,1989-04-30,RQTRJC26T18K273H,2020-01-04,620130,bvitali@hotmail.com
 99,67,Cosetta,Lombardi,1986-01-15,DCKOAC55H36S724K,2020-09-07,620131,amos55@gmail.com
-100,66,Nicoletta,Lombardi,1994-12-20,QRNGIR69Z00N841O,2020-08-20,620132,rpiras@yahoo.com
 101,75,Cleopatra,Battaglia,1985-06-15,LTNWLQ50J39E699Y,2019-06-22,620133,nicoletta.messina@barone.it
 102,71,Thea,Longo,1976-10-31,ZCPUNB13W04T011E,2020-02-24,620134,nneri@yahoo.it
 103,68,Neri,Esposito,1979-11-03,FAPTAK83K62N574X,2019-01-29,620135,sirio28@grasso.com
@@ -85,7 +86,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 110,2,Michele,Grassi,1989-06-25,NNMHSP17I40R915R,2021-01-13,620142,marchetti.kayla@benedetti.it
 111,62,Maristella,Fiore,1976-08-16,ZARUKQ81O76Y397B,2020-03-18,620143,gilda31@valentini.com
 112,31,Ione,Battaglia,1977-05-13,LZUMQF82A79W296M,2020-07-08,620144,carbone.bettino@moretti.it
-113,5,Giovanna,Conti,1994-12-01,VTSVMF45I06S872L,2021-03-27,620145,pellegrini.danuta@email.it
 114,34,Loretta,Morelli,1987-03-25,EUKQEK56V06A348L,2021-01-13,620146,qmessina@yahoo.it
 115,33,Cassiopea,Ferri,1975-01-10,OEFBQN11M07X470D,2018-11-27,620147,elio38@dangelo.com
 116,33,Soriana,Basile,1985-05-19,UMNRBK79G29K555O,2019-11-16,620148,pbianco@guerra.com
@@ -105,7 +105,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 138,22,Demi,Palmieri,1978-05-14,JBOCBZ92O50T042T,2019-01-02,620170,fiorenzo24@yahoo.com
 139,31,Carlo,Amato,1976-01-22,MAVYKM31U55A058I,2019-04-19,620171,moreno78@bernardi.com
 140,22,Lucia,Valentini,1987-12-27,GPDBVN15M49L174A,2018-11-22,620172,gentile.lidia@desantis.com
-143,49,Nico,Battaglia,1994-10-23,AFJUUW11D41P358B,2021-02-09,620175,bnegri@pellegrini.net
 145,12,Ermes,Colombo,1991-11-01,ZPQFXH75S91Z947V,2018-06-19,620177,giancarlo.neri@ferrara.com
 146,34,Vera,Pellegrini,1978-01-17,CRIXID13P67B011N,2020-05-18,620178,diana.conte@ricci.com
 147,61,Lamberto,Rizzo,1987-09-02,YBMGZS66L13V963O,2020-02-26,620179,fbenedetti@santoro.com
@@ -214,10 +213,8 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 295,28,Donatella,Caruso,1978-11-21,UUOXIS69C41H587P,2019-09-09,620327,manuele88@lombardo.it
 296,38,Rosalba,Farina,1992-02-01,DZQIKM26F39U036L,2019-06-11,620328,costantini.joshua@libero.it
 298,37,Isira,Milani,1994-02-05,OAYMQN71O27D039U,2019-07-15,620330,felicia65@yahoo.it
-299,56,Raniero,Parisi,1994-07-27,KQCIBN52Z17M027E,2021-04-20,620331,moreno.benedetti@desantis.it
 300,7,Modesto,Farina,1984-08-31,MLVFKF72I61E665A,2019-12-24,620332,bellini.kai@email.it
 302,61,Tristano,Pellegrino,1972-10-06,SCQDGU46O19J861M,2018-09-29,620334,donati.rebecca@galli.com
-303,53,Cosetta,Sala,1994-08-03,EGWRTV09F49G530P,2019-10-05,620335,kbianco@ferraro.net
 304,2,Dante,Fiore,1981-02-10,THHKKO27H33P541J,2018-06-30,620336,eriberto.neri@messina.it
 305,30,Cleopatra,Basile,1993-10-18,RVNZUN87D18V472B,2020-06-12,620337,maika.mariani@yahoo.it
 306,3,Maika,Bianco,1990-01-04,GVOZOR19K65V944K,2019-11-21,620338,nmancini@yahoo.com
@@ -282,7 +279,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 395,40,Dylan,Grassi,1988-08-22,LGVVEY39F59X401R,2020-03-10,620427,ethan.ferretti@yahoo.com
 396,41,Kristel,Greco,1986-02-14,GGVEEW40M12K883T,2020-07-19,620428,ferrara.claudia@caruso.org
 397,11,Albino,Morelli,1992-09-08,SXGYAU28H86R958J,2020-05-07,620429,fulvio.ferri@yahoo.it
-398,56,Amerigo,Sartori,1994-08-06,YUPUQX26R33G530L,2019-03-31,620430,caio62@libero.it
 399,12,Loretta,Carbone,1987-05-23,KTZDBV45W83Q231T,2020-11-01,620431,deborah95@yahoo.it
 400,50,Anastasio,Giordano,1984-08-15,VACXMR96A24X848P,2019-07-30,620432,mancini.odone@giordano.it
 401,49,Ione,Martino,1986-06-11,ZONQTX51L72K582F,2021-04-26,620433,deborah.bernardi@monti.com
@@ -400,7 +396,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 552,43,Joseph,Farina,1992-12-26,THRVKU27D25A233X,2020-01-04,620584,xgiuliani@ferraro.it
 553,1,Vera,Rinaldi,1972-06-07,JNYLEE00J30G573K,2018-11-19,620585,deangelis.enrica@gmail.com
 554,66,Eustachio,Morelli,1985-03-16,KIOQNF25L23E470Z,2020-12-29,620586,fiore.joey@fontana.net
-555,21,Marina,Rizzi,1994-12-27,DLLKSO93R33E138X,2019-11-07,620587,uriva@email.it
 557,4,Miriam,Grasso,1973-08-31,MJELLL88W49A419G,2018-12-07,620589,nfontana@conti.com
 558,29,Fortunata,Piras,1988-12-28,SOMCDL35C94M138L,2020-10-01,620590,lombardo.diamante@yahoo.it
 559,45,Mariano,Grasso,1977-06-13,YPRTAP54B96D306C,2018-10-21,620591,manuele.grasso@caruso.it
@@ -527,7 +522,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 721,20,Alberto,Bellini,1988-06-15,OAGHQP48Z30P414B,2021-05-03,620753,kristel.negri@messina.org
 724,42,Pierfrancesco,Orlando,1979-04-18,HARDIL15R74V608F,2021-04-08,620756,renato.amato@grassi.it
 725,14,Enrico,Riva,1994-06-28,AGGMUP29Q53Y562D,2019-09-11,620757,rossetti.gilda@ferraro.it
-726,54,Tosca,Ricci,1994-07-10,DRKMCB38Q84W635K,2020-02-20,620758,eusebio78@yahoo.com
 727,27,Elga,Rizzi,1987-08-07,ABTVVD97U22J141Z,2021-05-07,620759,lombardo.vitalba@email.it
 728,72,Arturo,"De Santis",1972-01-04,EFGHFZ35Q57D741N,2019-03-18,620760,cira.barone@carbone.it
 729,60,Loretta,Palmieri,1982-12-06,VISTNE43C43H606P,2019-06-02,620761,damico.maristella@rinaldi.com
@@ -552,7 +546,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 755,29,Ione,Costantini,1973-03-18,UVLNLM74U25M085B,2020-09-02,620787,elda.bianco@yahoo.com
 757,1,Alberto,Palumbo,1974-02-26,ZSGQRS09A97I959L,2020-06-17,620789,fsanna@yahoo.com
 759,70,Michele,Montanari,1976-11-26,CXQRFM56V38R138Y,2021-06-03,620791,prizzo@montanari.com
-760,25,Lazzaro,Mariani,1994-10-22,FTZBAX47W74Z626Z,2019-06-29,620792,vera.damico@damico.org
 761,67,Cosetta,Moretti,1974-07-05,VIUEOO23O98W956J,2019-08-15,620793,mariapia32@yahoo.it
 763,4,Ethan,"De luca",1971-07-27,HALSZW86I47G137D,2019-10-20,620795,graziano82@gmail.com
 764,44,Carmela,Pellegrino,1988-08-11,OSOJIG73M45E650L,2019-03-18,620796,conte.adriano@gmail.com
@@ -620,7 +613,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 853,55,Tancredi,Basile,1984-05-22,UQPIDT01E20L400J,2019-06-20,620885,eferri@libero.it
 854,28,Giulio,Vitale,1980-09-04,LSHRFH03K26R397G,2020-01-16,620886,mconte@rinaldi.com
 855,73,Gilda,Riva,1986-04-26,XAGJGT92X57W228L,2018-09-18,620887,sala.sarita@damico.it
-856,8,Marieva,Basile,1994-10-16,EQETXB13Y02G267G,2021-04-29,620888,damico.doriana@sorrentino.net
 857,56,Prisca,"De luca",1990-03-12,EEGCVW93W78P140E,2019-09-26,620889,enrica.pagano@gallo.it
 858,56,Tazio,Bruno,1991-09-07,TLKPPU92U53A011N,2019-12-01,620890,damico.ferdinando@email.it
 859,59,Fiorentino,Silvestri,1991-10-05,PPVDYD75H64P758E,2019-07-26,620891,sferrara@cattaneo.com
@@ -735,7 +727,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 997,30,Akira,Palumbo,1979-11-16,SAINVP68P79O346U,2019-10-13,621029,fiorentino89@gentile.it
 998,75,Enrica,Coppola,1977-01-26,HRDWZY11B85T659G,2021-03-19,621030,rossi.olimpia@libero.it
 999,42,Rosalba,Russo,1981-02-07,PWMLGG94Z68N197Z,2018-07-06,621031,jpalumbo@gmail.com
-1000,2,Clodovea,Lombardo,1994-09-30,DRUATB76D70W116U,2018-06-10,621032,sanna.ubaldo@colombo.com
 1001,42,Giulio,Benedetti,1979-06-09,KJFPNC79I23Y370S,2019-02-01,621033,negri.manuele@email.it
 1002,60,Clodovea,Fabbri,1985-02-24,OZUDUV93G81W940Q,2018-09-19,621034,onegri@hotmail.com
 1003,51,Gianmarco,Rinaldi,1971-11-26,GIBDGC66C22W349H,2020-08-01,621035,deangelis.jelena@galli.net
@@ -822,7 +813,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1103,55,Nick,Coppola,1992-07-24,PTEAXV05O01E641A,2021-06-03,621135,orlando.sesto@email.it
 1104,43,Sebastian,Parisi,1989-01-30,MIXCSG46R73V709B,2019-06-09,621136,lucia.romano@mariani.com
 1105,25,"Sue ellen",Conti,1983-12-05,RUNNXF51Q27N949A,2020-04-28,621137,blombardo@yahoo.it
-1106,16,Giancarlo,Ferretti,1994-12-27,ANKUEZ76C77G221P,2019-03-09,621138,naomi.esposito@ferrari.com
 1107,29,Cira,Vitale,1973-12-04,WYSGAZ87D19X782O,2020-01-04,621139,jmoretti@bernardi.it
 1109,21,Luigi,Rinaldi,1986-09-30,DMQEAD60V01S183C,2021-03-19,621141,lombardo.fulvio@libero.it
 1110,67,Luna,Costa,1972-11-27,TCIMJF87I21Q717N,2020-04-20,621142,marino.evangelista@hotmail.com
@@ -834,7 +824,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1117,65,Elga,Farina,1991-02-27,VZBEWA85B81Z430Y,2020-01-14,621149,russo.ileana@grassi.it
 1118,9,Piccarda,Donati,1983-03-03,TROOKF13E91K245Z,2020-10-17,621150,miriana36@yahoo.it
 1119,65,Amerigo,D'angelo,1983-01-18,WCVFLI07Y82T372J,2019-07-28,621151,knegri@libero.it
-1120,71,Giovanna,Rossetti,1994-08-09,BFRQVN31I27N328M,2018-07-24,621152,csorrentino@parisi.com
 1122,40,Kociss,"De Angelis",1990-06-01,VQHNXM66A72G075Q,2021-04-24,621154,brigitta87@basile.it
 1123,10,Albino,Riva,1990-11-13,JXPRBQ67E99E968Q,2020-03-04,621155,rferraro@email.it
 1124,73,Modesto,Longo,1991-08-06,XJPTGK81J44S544T,2018-10-02,621156,pbianco@marini.org
@@ -915,7 +904,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1226,26,Irene,Coppola,1989-10-19,LINOIM76T33H737R,2019-09-27,621258,gavino82@bruno.org
 1227,26,Rodolfo,Rossetti,1990-05-21,NTZRPT68F75Y770Y,2019-09-25,621259,timothy.lombardi@martino.org
 1228,15,Cassiopea,Fiore,1981-01-19,VRKBKG64K85L176E,2019-10-11,621260,anastasio67@negri.com
-1229,29,Cristyn,Martini,1994-07-28,TBZKPO33J47N243V,2020-07-09,621261,raoul11@desantis.com
 1230,53,Serse,Rinaldi,1975-12-12,UPLQZO01S72C979U,2020-11-17,621262,donatella.donati@gmail.com
 1231,7,Rebecca,Mariani,1981-02-08,SMFRAF68N36A499F,2020-04-01,621263,prisca89@hotmail.com
 1232,44,Jack,Romano,1976-09-05,WUEIQW88T47D630L,2018-09-14,621264,wcarbone@libero.it
@@ -948,7 +936,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1267,54,Luce,Damico,1993-12-13,ZVVYQD57B96K739T,2019-07-02,621299,sorrentino.sirio@hotmail.com
 1268,35,Marianita,Palmieri,1984-08-18,OUHGFT33D05H058W,2020-01-15,621300,davide62@rinaldi.com
 1271,52,Marco,Martini,1972-07-31,RNCLQT98L85H367D,2018-11-30,621303,vrizzi@gmail.com
-1272,57,Benedetta,Benedetti,1994-09-08,FVJPSO59K44C264H,2019-06-27,621304,luna30@yahoo.com
 1273,38,Rosalba,Villa,1984-09-23,BIDTAX16A57X867C,2020-10-06,621305,palumbo.gregorio@ferretti.it
 1274,15,Fortunata,Giuliani,1988-11-04,CCJUEE74R69X235M,2019-07-16,621306,fparisi@libero.it
 1275,25,Odone,"De luca",1982-06-29,RLOXHI57M02E840U,2021-05-22,621307,apalmieri@gmail.com
@@ -981,12 +968,9 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1313,36,Akira,Ferri,1972-11-28,JPYDBK79K59Y449O,2020-06-06,621345,anastasio.mazza@cattaneo.it
 1314,34,Sibilla,Parisi,1986-02-28,NWONVW67I97Q734O,2021-03-22,621346,rita.lombardi@hotmail.com
 1315,25,Joseph,Messina,1973-07-18,AGCZDH51G36H390Q,2019-05-13,621347,giuliano10@deangelis.com
-1316,57,Violante,Russo,1994-07-19,OOSFZV00T12L364N,2020-12-05,621348,eufemia21@bruno.com
 1317,24,Lucia,Lombardi,1985-01-25,VORLWL73E82A212E,2019-07-27,621349,ncostantini@marchetti.org
-1318,38,Sebastian,D'angelo,1994-12-23,XSUZJC52W25V564W,2021-05-13,621350,bacchisio.bianchi@yahoo.com
 1319,59,Vienna,Ferrari,1974-03-14,IJHBWU65U10V965Q,2020-08-09,621351,ubaldo13@libero.it
 1320,40,Ermes,Martinelli,1980-08-12,VDORFC01F00F993H,2020-04-05,621352,nathan20@libero.it
-1321,59,Osvaldo,Marchetti,1994-12-16,SZKOHT02A44L757D,2020-08-04,621353,mariapia.ferretti@yahoo.com
 1322,58,Mirko,Bianchi,1983-01-14,RQUFRQ28E46X480I,2019-09-03,621354,folco02@pagano.net
 1323,65,Tristano,Silvestri,1980-07-19,UGVUWC98G10T427X,2020-08-11,621355,mariapia.bernardi@sala.org
 1324,65,Elsa,Silvestri,1979-11-02,QDKMRW07Y18R271T,2020-01-21,621356,italo.coppola@barone.com
@@ -999,9 +983,7 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1332,49,Elio,Rizzi,1984-02-01,KBPAEL86D56D736R,2021-05-14,621364,rrossetti@email.it
 1334,2,Mirco,Marino,1992-11-08,AJLMFF17R74E282S,2020-07-17,621366,bmazza@riva.it
 1335,37,Baldassarre,"De Santis",1985-04-11,EGDBKY54X89S436M,2019-01-15,621367,umariani@marini.it
-1336,8,Marina,Gatti,1994-10-04,FUKRKX24Y40J230Z,2020-12-20,621368,dmazza@hotmail.com
 1338,63,Lisa,D'amico,1974-07-03,CTLYXA68R16J361E,2021-04-15,621370,fabbri.oretta@hotmail.com
-1340,19,Rosaria,Parisi,1994-10-11,DWSHNZ01O82A043L,2020-02-12,621372,kgreco@gmail.com
 1342,62,Michele,Parisi,1986-05-21,GIJKBT34R38H226W,2020-08-02,621374,emanuel.serra@yahoo.it
 1343,8,Cosetta,Martino,1990-01-06,CTSGZY69B86N969L,2018-08-04,621375,basile.zelida@testa.it
 1344,38,Lia,Valentini,1983-09-16,MLXFTG59Y53L614O,2018-07-05,621376,benedetti.bacchisio@dangelo.com
@@ -1034,7 +1016,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1382,53,Ubaldo,"De rosa",1984-03-05,GCQWZW96I47N889V,2018-12-09,621414,gilda77@caruso.com
 1383,21,Pericle,Conte,1986-04-22,XSVDYO55O20J524T,2019-12-26,621415,xferraro@deangelis.it
 1384,2,Nestore,Testa,1977-12-21,LSREKK95G85Q021B,2019-11-09,621416,sandro37@yahoo.it
-1385,44,Elio,Rizzo,1994-12-19,RPQDYM01C51K756S,2019-05-06,621417,cbellini@libero.it
 1386,74,Nicoletta,Carbone,1973-12-22,YUSGJT76C12W531V,2018-07-22,621418,violante75@greco.com
 1387,30,Damiano,Rossi,1978-09-21,EOUDNM97W01I628J,2020-12-23,621419,noah.colombo@damico.it
 1388,19,Mirco,Bruno,1973-02-04,KJGHLO28J22P156T,2020-07-07,621420,manfredi10@montanari.it
@@ -1138,7 +1119,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1521,45,Guendalina,Serra,1971-08-31,ZGOXJV97P35Y046Y,2019-06-08,621553,trevis54@fabbri.it
 1522,11,Cecco,Rizzo,1988-11-04,HMINDR96A76Z195C,2020-02-14,621554,ivonne23@yahoo.it
 1523,25,Folco,Caputo,1986-04-16,GMZYTG64B53Q464E,2021-02-01,621555,colombo.akira@yahoo.it
-1525,41,Eustachio,Benedetti,1994-08-09,JALSLD57V00M497B,2021-01-14,621557,rmartinelli@donati.com
 1526,61,Nick,Cattaneo,1979-02-01,OQNTYF84O48L488T,2019-02-03,621558,testa.eufemia@email.it
 1527,40,Samira,Benedetti,1987-03-23,KHAPLJ79T15W282L,2019-04-19,621559,fortunata.milani@neri.it
 1528,45,Concetta,Gentile,1979-11-12,QPUWDL96J89F136S,2021-02-02,621560,giovanna.caruso@yahoo.it
@@ -1176,7 +1156,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1566,74,Omar,Marchetti,1989-06-12,RYCHVW10H56J678K,2018-11-19,621598,bianco.irene@libero.it
 1567,15,Tosca,Gentile,1978-03-06,MIQHZF89W68F381R,2019-06-04,621599,negri.elio@yahoo.it
 1568,30,Guido,Giuliani,1986-08-01,DMZAIO71L96O578O,2021-05-30,621600,flaviana.fontana@yahoo.com
-1569,40,Genziana,Orlando,1994-08-10,VFMCRV40T41W367R,2019-03-29,621601,helga41@costa.net
 1570,49,Eustachio,Silvestri,1974-05-14,OSWWTK50L01F065U,2019-06-11,621602,elsa61@email.it
 1572,61,Ruth,Guerra,1990-07-31,UAEVLN07P28Z561C,2020-12-10,621604,demi08@rossi.it
 1573,61,Orfeo,Sartori,1987-01-14,ENTBNO09R67D996N,2019-03-11,621605,ypiras@email.it
@@ -1206,7 +1185,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1603,46,Elga,Giuliani,1978-04-25,FTHLXU88X17R048S,2018-12-01,621635,ulombardi@yahoo.it
 1604,75,Danthon,Sanna,1980-04-19,UWPBKT64E41N826U,2020-01-15,621636,maruska11@moretti.it
 1606,46,Marvin,Greco,1984-08-14,XQRDBK81Y31K059G,2020-12-30,621638,grazia.sala@donati.com
-1607,66,Emilia,Benedetti,1994-08-02,UBWDBW84E60P002Q,2019-09-09,621639,vera.gatti@yahoo.com
 1608,25,Vitalba,Rossi,1991-09-15,JEPGZT73T06F196D,2019-08-02,621640,fabbri.siro@basile.it
 1609,33,Giacinta,Martino,1978-04-29,RJVWOM71Q60K457R,2019-01-05,621641,lorenzo.moretti@donati.it
 1610,55,Elsa,Conte,1982-04-19,TPNJQR96T91C477H,2021-04-12,621642,germano42@hotmail.com
@@ -1313,7 +1291,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1738,16,Ercole,Pellegrini,1973-11-23,RJJZSV39B97N723H,2020-11-26,621770,fferretti@ferrari.com
 1739,4,Raniero,"De rosa",1990-07-04,ORXOEI75M49L732L,2019-06-12,621771,joannes.sartori@yahoo.it
 1740,12,Diana,Vitale,1993-05-20,TSSCWK24K68I551Q,2020-04-19,621772,cira.villa@gmail.com
-1744,32,Gianleonardo,Giordano,1994-12-21,TGCKTW39W93E183I,2020-12-21,621776,arossetti@libero.it
 1745,17,Damiana,Bernardi,1976-06-29,JBJLCB91X23F337N,2020-10-30,621777,kris13@yahoo.it
 1746,40,Ludovico,Cattaneo,1993-04-04,VKTMTC66Z29T846B,2019-05-03,621778,pmartinelli@hotmail.com
 1747,15,Gastone,Fiore,1978-06-26,YOVDTT48P73F056V,2019-10-24,621779,jsanna@fiore.net
@@ -1340,7 +1317,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1773,58,Eusebio,Donati,1976-06-20,IBQURL08V38G068O,2020-01-12,621805,morelli.oretta@bernardi.it
 1775,42,Kristel,Vitali,1975-06-30,MDULAM96X74I170W,2021-06-04,621807,leone.arduino@yahoo.it
 1777,58,Egisto,Donati,1974-12-13,AGHKPG04S56E843G,2018-12-04,621809,dangelo.neri@yahoo.com
-1778,69,Rosita,Serra,1994-08-15,NRMVTK36D28F265E,2020-08-16,621810,sibilla39@gentile.org
 1780,70,Marzio,Rizzi,1976-04-28,RMKZFX96P51G620G,2018-08-20,621812,jbarbieri@carbone.com
 1781,64,Anselmo,Giuliani,1978-09-26,JCWYRT71X19L156W,2019-06-08,621813,ruggiero.diamante@yahoo.it
 1782,59,Rita,Colombo,1972-08-23,HACCVN47H72W221Y,2019-06-24,621814,costantini.deborah@sorrentino.it
@@ -1353,7 +1329,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 1789,72,Marianita,D'amico,1992-07-12,ADECIO53B18L492B,2021-05-04,621821,nunzia96@rossi.com
 1790,14,Quirino,Rizzi,1982-10-02,ODKMVS68K91N502O,2020-06-27,621822,desantis.benedetta@mancini.it
 1791,58,Benedetta,Caputo,1977-01-29,YOSSRM83X39M197O,2018-09-12,621823,raniero.basile@gmail.com
-1792,64,Noel,Valentini,1994-12-16,HQMTDR79G55O470P,2018-12-05,621824,rossetti.penelope@sartori.it
 1793,56,Enrico,Marino,1972-06-12,PPEUCB98D18N970O,2020-01-11,621825,mazza.loredana@gmail.com
 1795,67,Evangelista,Sorrentino,1972-03-23,EIFUTO81X53J572M,2020-10-22,621827,luna.silvestri@yahoo.it
 1798,1,Timothy,Damico,1974-04-08,PAOUUD53B52J508R,2020-05-25,621830,gmoretti@gmail.com
@@ -1558,8 +1533,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2070,27,Albino,Colombo,1993-02-14,ZKURKZ93K16G715O,2019-11-05,622102,bibiana20@yahoo.it
 2071,2,Miriana,Serra,1977-06-19,UTXKRG75Z54P564W,2019-08-29,622103,edilio.martino@yahoo.it
 2072,17,Ludovico,Palmieri,1993-04-15,YBXHGH38P19J590M,2018-12-20,622104,emidio.caputo@martino.net
-2075,18,Gavino,Fiore,1994-09-23,EOYWMU27A04C181N,2020-02-08,622107,pellegrini.alberto@yahoo.com
-2077,42,Miriana,Ferrara,1994-09-05,YHKHXJ66N68Z524Q,2018-12-26,622109,irizzi@yahoo.it
 2078,41,Helga,Ferrara,1976-06-18,ATLUBB99O95U475N,2021-05-09,622110,donatella.cattaneo@yahoo.it
 2079,64,Ilario,Grassi,1986-05-01,VXVJZB28N17V336R,2018-12-15,622111,longo.fabiano@yahoo.com
 2082,47,Secondo,Ferri,1977-01-01,UFTSHL75K69Q442Y,2019-12-05,622114,pneri@fabbri.org
@@ -1570,7 +1543,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2089,2,Nunzia,Valentini,1972-01-14,IYFIXK85R33Y770P,2019-03-30,622121,ogallo@grassi.com
 2090,46,Loris,"De Angelis",1994-05-06,WHEOOV04M18P725P,2019-05-11,622122,leonardo.giuliani@gentile.net
 2091,11,Sarita,Basile,1971-06-29,YKWJBW80V11Y286E,2020-09-18,622123,piccarda.rizzi@yahoo.com
-2092,19,Tazio,Piras,1994-08-17,WKJZLR55D37I009U,2019-02-21,622124,romolo69@palumbo.it
 2094,53,Maria,Neri,1980-12-12,SBFTXE97S42L193J,2018-06-09,622126,rinaldi.rosaria@hotmail.com
 2095,48,Luce,Galli,1992-03-15,XABSQH71L22D074V,2019-06-05,622127,mariagiulia92@libero.it
 2098,20,Alessio,Silvestri,1978-07-15,DNFHCJ63G43W960M,2018-12-03,622130,guendalina21@martino.com
@@ -1742,7 +1714,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2299,53,Giuliano,Martini,1974-07-16,ACSVZW15L70T562G,2021-02-25,622331,fulvio73@libero.it
 2300,63,Muzio,Marini,1985-12-06,NJRJNB73I08A042D,2020-07-20,622332,lucia.battaglia@martini.com
 2301,31,Akira,Cattaneo,1988-03-29,JYXRBD55Q76S182M,2020-06-07,622333,cleopatra86@yahoo.com
-2303,66,Rosolino,Giuliani,1994-08-12,NWCRTS12A32Y246D,2020-04-02,622335,aaron.messina@yahoo.it
 2305,39,Anastasio,Caputo,1984-01-18,YPXUXY11Z88J583Z,2021-03-30,622337,mercedes.martini@farina.it
 2306,36,Marcella,Barbieri,1978-08-06,QZHMTI93L75W871Y,2020-04-27,622338,rinaldi.cira@esposito.net
 2307,71,Damiana,Gallo,1980-12-08,VNNRJZ11W50A055I,2019-05-05,622339,fcattaneo@yahoo.com
@@ -1859,7 +1830,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2453,23,Sasha,Esposito,1981-10-22,QVJSDC80X70B138B,2020-10-30,622485,ricci.umberto@gmail.com
 2454,28,Nunzia,Caputo,1975-02-19,TUIJKY86Z69A432A,2018-06-10,622486,giulietta23@costa.net
 2455,1,Joshua,Russo,1982-12-22,FEHPRR60M05R373Q,2020-05-09,622487,gelsomina43@email.it
-2457,22,Mercedes,Donati,1994-11-21,ZOQRZA50L18B173Y,2021-05-07,622489,harry.bianco@yahoo.com
 2458,8,Valdo,Pagano,1979-09-06,AKLUWR59X63T281H,2018-11-02,622490,helga18@email.it
 2459,59,Samira,D'angelo,1990-06-28,SDAIYB76D36C025J,2018-06-27,622491,marvin95@vitale.it
 2460,2,Manuele,Bianco,1990-10-16,ZMTQBT82G25S557M,2019-04-26,622492,serra.oretta@yahoo.com
@@ -1926,7 +1896,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2543,24,Tolomeo,Milani,1980-06-27,YFKWPV39A55B224C,2019-06-05,622575,fatima76@deluca.it
 2544,55,Bacchisio,Romano,1977-02-01,HTBQHN40N46C329D,2020-09-09,622576,irizzi@villa.it
 2545,13,Giacinto,Bianco,1976-02-13,LTWWWN96P05Y725A,2020-04-03,622577,clea.negri@gmail.com
-2546,17,Adriano,Rinaldi,1994-08-20,RHTZJE28V23Q341J,2020-12-07,622578,gentile.cosetta@yahoo.it
 2547,25,Leonardo,Giordano,1984-05-21,NWQNIL57E67F535I,2018-09-02,622579,anastasio.valentini@yahoo.com
 2548,52,Marzio,Ferraro,1983-03-06,GAJFBA73T78M372W,2020-09-04,622580,vsorrentino@yahoo.com
 2549,47,Ileana,Rossetti,1988-07-06,MWQBCV08V11V599M,2020-10-22,622581,mirco.caruso@guerra.net
@@ -1957,7 +1926,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2579,8,Laura,Valentini,1983-07-22,ABIYZX48P85O184Z,2019-02-02,622611,rosaria.palumbo@ferraro.net
 2581,68,Nadir,Bianchi,1988-06-05,ZBREUR11Z99N027Z,2020-11-04,622613,ericci@hotmail.com
 2582,37,Noel,"De Santis",1973-11-06,ROVXER90O70L872T,2020-08-11,622614,ferraro.raniero@gmail.com
-2583,34,Felicia,D'angelo,1994-10-17,OQJQJS65C32C603D,2018-09-15,622615,fiore.zelida@giuliani.it
 2585,8,Soriana,Lombardi,1975-01-21,JNZWIJ11O05C966K,2018-12-12,622617,fromano@conte.net
 2586,17,Laura,Messina,1979-06-02,BJNJIR84I22A984W,2021-01-28,622618,nathan.milani@email.it
 2587,4,Xavier,Grassi,1975-10-10,PDVDDE86V16M835E,2021-02-08,622619,fruggiero@yahoo.it
@@ -2066,7 +2034,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2732,44,Ulrico,Esposito,1982-07-04,WANPJF91I94C938Z,2018-10-17,622764,ricci.amos@mancini.com
 2733,50,Caligola,D'amico,1993-04-27,AHYGSG08G47F196R,2018-08-15,622765,kayla.mancini@yahoo.com
 2734,60,Penelope,Marini,1979-07-25,EKGMWX36R70O832M,2019-04-19,622766,derosa.matilde@libero.it
-2736,47,Noemi,Bianchi,1994-11-01,KIXEGG45C20P101J,2020-01-16,622768,emilia.pellegrino@yahoo.it
 2738,56,Oreste,Damico,1987-03-30,NWEWJG65T06T211K,2019-04-12,622770,parisi.felicia@bianco.it
 2739,70,Giulietta,Palumbo,1987-06-16,OHFHIG43O07Z164Y,2019-03-31,622771,alombardi@amato.com
 2740,36,Maruska,Milani,1992-01-26,UNMXWT23L95J443C,2018-08-19,622772,jpalumbo@marino.com
@@ -2089,7 +2056,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2763,75,Monia,Galli,1990-07-19,EHEBAS76W43N388S,2020-08-18,622795,moretti.gelsomina@grassi.org
 2764,60,Luce,Riva,1974-10-15,QGCVBP72J87J231K,2020-02-05,622796,prisca.ferrari@testa.com
 2766,9,Boris,Pellegrini,1989-10-21,EEEFYU75H94R410H,2021-03-04,622798,ysanna@gmail.com
-2767,51,Fortunata,Pellegrini,1994-09-07,TFJIZJ03Z30U128M,2018-12-08,622799,cvitali@yahoo.it
 2768,6,Luce,"De Santis",1988-11-13,HFVMZO52C17N411Z,2018-07-10,622800,marino74@ricci.it
 2769,16,Oreste,Ferraro,1983-12-20,IJRCEH06D17A155F,2020-12-16,622801,rbianco@hotmail.com
 2770,62,Concetta,Basile,1978-08-14,RHVXAZ12S49X988M,2019-11-06,622802,rebecca.bianco@libero.it
@@ -2177,7 +2143,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 2871,3,Doriana,Fabbri,1993-05-16,THVBWI14S85L451G,2019-06-22,622903,kai.fontana@email.it
 2872,37,Emidio,Rossi,1972-07-21,WQVCBF28E21X017F,2020-12-14,622904,irene.martinelli@yahoo.it
 2873,26,Eufemia,Fiore,1982-10-22,WDQNPZ69Q03X411K,2018-08-12,622905,anselmo78@ferretti.it
-2874,43,Eustachio,Mancini,1994-12-07,NYMTCB06O47E979T,2019-08-30,622906,olimpia94@yahoo.it
 2875,25,Lauro,Montanari,1991-09-17,CRKURS72S16M989Q,2020-11-02,622907,gsilvestri@marino.it
 2876,14,Giulietta,Damico,1979-07-14,EUMKOE44N23Q825P,2020-08-24,622908,dante.costa@gmail.com
 2877,38,Antonio,Ferrara,1971-09-08,HZJHYZ66D61A414G,2018-08-15,622909,tosca.russo@sanna.com
@@ -2289,7 +2254,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3016,8,Matilde,Gentile,1986-03-28,DYKZNG90M77V145N,2019-02-13,623048,romeo21@romano.com
 3017,57,Cleopatra,Neri,1975-09-06,YLUIGP01T58U439L,2018-11-21,623049,mgrassi@guerra.it
 3018,70,Lia,Fiore,1977-08-04,KHTDQT10A08J181P,2019-11-08,623050,marini.fulvio@email.it
-3019,71,Clodovea,"De luca",1994-09-24,XTDHUB21L79Y654E,2020-10-26,623051,ethan45@colombo.com
 3020,29,Nunzia,Messina,1985-07-19,CEFIGS55E43N285L,2019-05-25,623052,shaira66@hotmail.com
 3021,32,Selvaggia,Morelli,1977-11-18,TSOGKU02L47I668W,2018-09-27,623053,artemide.damico@negri.net
 3023,38,Pierfrancesco,D'amico,1991-08-18,ATUMGS04K24L588W,2019-08-13,623055,emilia.dangelo@yahoo.it
@@ -2328,7 +2292,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3060,13,Fortunata,Bianco,1984-06-15,LISRHP66O81Z061O,2020-03-03,623092,sibilla75@yahoo.com
 3061,7,Clea,Rinaldi,1978-11-17,RCPGSH03J81E468Q,2020-05-13,623093,wconti@conti.com
 3062,3,Doriana,Sorrentino,1993-12-10,UPORZK90Y42Y609P,2018-09-14,623094,enzo.bernardi@hotmail.com
-3063,39,Tancredi,Gatti,1994-08-18,FOLDPW36A47H229Y,2020-09-12,623095,ricci.ursula@hotmail.com
 3065,39,Rosalba,Farina,1973-08-31,FZPLWT71X48Z596X,2019-02-22,623097,martinelli.jarno@santoro.org
 3066,34,Rosalba,Palmieri,1978-01-04,LFYRYQ84M30C200Q,2018-12-01,623098,prusso@yahoo.com
 3067,29,Trevis,Ferrara,1975-08-19,XMYNWB98H97S331C,2019-06-09,623099,leone78@bernardi.com
@@ -2409,7 +2372,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3164,58,Assia,Conti,1972-05-30,DYCNNI98S67V607M,2021-03-04,623196,ebarone@email.it
 3166,18,Lisa,Bianco,1983-06-27,YPVBUK67F74R670M,2018-12-08,623198,marieva.rizzo@fiore.com
 3167,49,Giuliano,Piras,1977-05-07,XODBCB76X97C756L,2021-05-26,623199,bbellini@email.it
-3169,34,Pacifico,Marini,1994-08-20,XYOHXM85P43F485B,2019-06-06,623201,bdonati@yahoo.it
 3170,64,Ingrid,Marchetti,1991-10-05,NNMYGF82P48U936J,2019-04-14,623202,gavino.moretti@moretti.com
 3171,67,Emanuel,Rizzo,1977-06-30,EJKXIF28E72M545T,2020-01-04,623203,loretta.derosa@hotmail.com
 3172,52,Lazzaro,Romano,1983-09-18,QSGUFJ09V21O558U,2018-06-26,623204,ethan.grassi@libero.it
@@ -2420,7 +2382,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3177,52,Irene,Testa,1972-05-29,SXUZPS88E43T026I,2021-04-30,623209,tazio92@gmail.com
 3178,18,Cleopatra,Sartori,1977-06-23,AKLWGW79E02P661A,2020-07-22,623210,cattaneo.italo@villa.it
 3179,44,Tommaso,Palumbo,1976-06-04,AYNHZL88H19Q983W,2019-01-31,623211,ppellegrini@mancini.com
-3182,2,Egidio,Gentile,1994-07-17,GNAJPL91Q95A999R,2018-07-09,623214,ivano.valentini@romano.com
 3183,33,Timothy,Battaglia,1977-05-20,KNGYWA89S74R394B,2019-01-09,623215,hdesantis@carbone.net
 3185,29,Ivonne,Donati,1992-10-24,CZNHIO48N86J069C,2020-03-06,623217,costantini.antonio@yahoo.com
 3186,8,Nunzia,Donati,1992-07-22,FSPPOR64T67M574B,2021-01-25,623218,giobbe.damico@hotmail.com
@@ -2541,7 +2502,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3336,24,Michael,Colombo,1981-11-11,CWWPET32D56N906E,2021-02-12,623368,gilda00@yahoo.com
 3337,47,Loredana,Riva,1986-12-31,JIOIUH34A38Y630U,2019-07-17,623369,silvestri.morgana@gallo.net
 3341,5,Marvin,Bianco,1987-01-26,SNXNUY90L90O340S,2020-12-17,623373,cesidia.ferretti@email.it
-3343,68,"Sue ellen",Martini,1994-12-27,UXFNDJ50N11V077L,2019-11-18,623375,rufo.ferraro@rossi.it
 3344,19,Walter,Bernardi,1979-11-16,SAUFHA50L06O139R,2020-03-16,623376,acolombo@yahoo.it
 3345,39,Nathan,Rizzo,1983-05-31,OTRXZP97L89F284R,2020-01-12,623377,violante.grasso@vitale.org
 3346,19,Fabiano,Esposito,1981-04-07,MTMSYH24W66G398A,2020-03-21,623378,kristel.martinelli@yahoo.com
@@ -2554,7 +2514,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3355,1,Rosolino,Neri,1973-05-06,EPYOZR26G03C956B,2020-01-20,623387,grasso.augusto@gmail.com
 3356,17,Lorenzo,Marchetti,1983-02-19,HSWMFG18O65Q895W,2020-07-02,623388,desantis.bacchisio@yahoo.it
 3359,72,Claudia,Lombardo,1987-12-01,RDOZKH57E27I723P,2018-08-25,623391,isabel50@libero.it
-3360,19,Orfeo,Ferretti,1994-08-18,FHXFFD58N96M683E,2020-04-19,623392,pferrari@esposito.com
 3361,33,Graziano,Martini,1990-12-18,XKGEWA77J64W440J,2021-03-15,623393,costa.nathan@yahoo.com
 3362,69,Flavio,Coppola,1975-01-21,OYLHHW70X46F618Z,2018-11-04,623394,harry.grassi@romano.net
 3364,16,Cleopatra,D'angelo,1974-10-27,MLPJWG88Q02O122V,2021-04-05,623396,ferrara.radio@damico.com
@@ -2639,7 +2598,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3473,48,Doriana,Longo,1977-10-17,CXGPVL39R87J938X,2020-05-20,623505,matilde.villa@hotmail.com
 3474,55,Jole,Ricci,1975-03-15,XJHMXQ28O47Z549E,2021-02-18,623506,selvaggia.farina@yahoo.com
 3475,53,Giuliano,Ricci,1983-12-01,TYCZGL59R15M361Y,2020-01-10,623507,sasha.fontana@desantis.it
-3477,59,Nayade,Palmieri,1994-10-06,MLMAOB72W43K850X,2021-02-25,623509,gmartini@email.it
 3478,58,Giacinta,Milani,1985-04-25,ICOWPH26F71E803C,2019-08-01,623510,ibarone@parisi.org
 3479,49,Maruska,Barone,1990-09-07,HQTHGC20J16T421F,2019-01-29,623511,igrasso@grassi.com
 3480,35,Fortunata,Moretti,1984-05-26,EQCSPB19Z94X203X,2019-01-19,623512,marvin.coppola@email.it
@@ -2711,7 +2669,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3560,36,Timoteo,Sartori,1973-10-08,ZAYYWY68X49Q980T,2019-05-11,623592,kgrassi@gmail.com
 3561,50,Armando,Orlando,1973-05-23,VJLACJ80P29O434H,2019-04-25,623593,isabel20@libero.it
 3562,69,Ursula,Ricci,1972-10-16,DBIQDI06A49Z728A,2021-05-24,623594,farina.enrico@pellegrini.com
-3563,40,Luce,Ruggiero,1994-12-25,MSDPQZ47J02X427I,2018-10-23,623595,mancini.kayla@esposito.it
 3564,43,Furio,Pellegrini,1988-05-01,COLNZF38Q23P517R,2019-09-17,623596,obattaglia@ferri.com
 3566,29,Gerlando,Pellegrini,1976-01-18,SSHDMG30W34Q355J,2018-09-18,623598,felicia.dangelo@email.it
 3567,19,Lidia,Ferrara,1986-07-09,LMIWJQ81X59E166H,2020-11-07,623599,romeo.gatti@costa.it
@@ -2748,14 +2705,12 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3607,49,Dimitri,Marini,1982-03-25,BMEEHH60G80J569S,2020-03-10,623639,rpalumbo@longo.org
 3608,16,Fatima,Rizzi,1976-07-02,WCULOE62B61Z464C,2020-11-24,623640,rosita.grassi@email.it
 3609,11,Max,Milani,1980-07-19,QVIGTX70E60L393Y,2019-05-07,623641,joey.martino@yahoo.com
-3610,47,Gerlando,Rinaldi,1994-08-05,SIKQCE38K63F916D,2020-06-14,623642,sesto.vitali@email.it
 3611,62,Marina,"De Angelis",1979-01-10,JSJKVQ94I91W429O,2018-12-25,623643,bruno.olimpia@negri.com
 3613,1,Rosalba,Grasso,1979-11-02,LLBSQT61D30A846X,2019-03-24,623645,pmilani@yahoo.com
 3614,27,Celeste,Palumbo,1985-07-22,GDUQDL69P72Y529O,2018-12-10,623646,bellini.giacinta@hotmail.com
 3615,31,Lucia,Ferretti,1982-02-06,XMKHDD35C25F607O,2019-02-17,623647,caligola.pellegrini@barone.org
 3617,4,Elda,Gatti,1982-09-19,JTXRPM28K27X860Y,2020-01-14,623649,battaglia.patrizio@gmail.com
 3618,18,Vitalba,Rizzo,1973-11-29,JAJIXT02F58R703X,2020-01-01,623650,bernardi.eufemia@yahoo.it
-3619,19,Emidio,Ricci,1994-09-14,YGNOBL73B99V055O,2019-07-24,623651,cgrassi@gmail.com
 3621,71,Damiano,Martino,1975-08-17,BOXCNS55B72R254U,2018-12-08,623653,ursula.ruggiero@pellegrini.it
 3622,27,Noah,Rizzo,1974-06-01,MVCCEE39W21W165K,2020-05-08,623654,negri.prisca@bianchi.com
 3623,25,Emilia,Conte,1978-05-17,VFRQBZ06A59N456X,2019-03-13,623655,vitale.bettino@email.it
@@ -2769,7 +2724,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3634,49,Ulrico,Marino,1991-10-16,ITSFLF97Q97G949M,2018-12-14,623666,jvilla@battaglia.it
 3635,24,Rocco,Vitale,1976-03-27,IBBOPM91Y72Y727J,2019-10-28,623667,rosalino01@villa.com
 3636,61,Ivano,Rossetti,1993-06-01,BTAWQP11A60Q508K,2019-01-22,623668,ybenedetti@ruggiero.it
-3637,10,Olo,Marini,1994-12-23,NSKCTX64H67J432N,2019-01-18,623669,deluca.vitalba@lombardo.com
 3639,15,Rita,Silvestri,1975-01-28,XORJSJ13H45J284F,2019-10-16,623671,artes64@libero.it
 3641,25,Diana,Barbieri,1984-12-23,DHFYKC47A51K863M,2021-05-24,623673,ninfa22@libero.it
 3642,46,Loretta,Neri,1987-09-04,ORDKGR84K60G329U,2021-01-05,623674,amerigo23@hotmail.com
@@ -2819,11 +2773,9 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3698,51,Vienna,Sorrentino,1975-04-24,KABWWF51Q92T710B,2018-11-27,623730,cleros70@yahoo.com
 3699,47,Nayade,Valentini,1981-06-24,DFARFP19M49I178A,2020-12-26,623731,amato.marcella@libero.it
 3700,48,Vitalba,Pellegrino,1990-10-16,YHCHKS97R47J257I,2021-01-26,623732,tricci@ruggiero.com
-3702,70,Sarita,Conti,1994-09-08,FDPTAI78Z92W782S,2020-12-22,623734,orfeo24@hotmail.com
 3703,51,Helga,Lombardo,1976-12-01,EJKRFS82U69R182L,2018-08-26,623735,dangelo.rebecca@libero.it
 3704,5,Lia,Colombo,1993-07-09,UHZQGU42T25Q325A,2019-01-18,623736,kristel99@yahoo.it
 3706,64,Lazzaro,Rossetti,1980-06-05,WSFFBR14Y48B469P,2019-08-27,623738,jarno.silvestri@hotmail.com
-3707,45,Sibilla,Carbone,1994-09-20,VWMRMK25O52P015P,2020-11-21,623739,xavier.pagano@monti.it
 3710,46,Irene,Lombardo,1984-03-17,HNSXDE74M82R895W,2019-09-03,623742,zmartinelli@vitale.it
 3711,41,Irene,Esposito,1985-03-04,OSSWCJ24F52I469O,2020-11-21,623743,sarita.damico@gmail.com
 3712,18,Tommaso,Martini,1988-11-01,YUMVXR33Z44O206J,2018-06-17,623744,barbieri.ludovico@gmail.com
@@ -2888,7 +2840,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3796,25,Pablo,Rizzi,1977-02-17,XOGRWP35A22T103Y,2018-06-20,623828,romolo57@pellegrino.net
 3797,60,Giacinto,Mariani,1978-05-08,TEYRAE65N62D361W,2020-09-17,623829,mcaputo@messina.it
 3798,61,Guido,Ferrara,1989-12-25,TQUWLP40H77A143K,2020-06-12,623830,benedetti.alessandro@villa.it
-3800,39,Boris,Romano,1994-11-17,KDNKMA74L77B119Z,2019-01-28,623832,qbianco@negri.it
 3802,20,Serse,Sorrentino,1985-09-03,FBQMZO90B88Y550O,2021-04-06,623834,costantini.enrica@costa.com
 3803,17,Marina,Valentini,1978-12-30,ZKLBSZ55J63O401F,2021-01-02,623835,osala@libero.it
 3804,63,Ninfa,Vitali,1971-07-08,OALLMO10Q09Q491I,2020-09-28,623836,mariani.trevis@yahoo.it
@@ -2918,11 +2869,9 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3841,24,Ausonio,Sala,1990-02-23,DPCTHN72Q38Q077G,2019-10-18,623873,arcibaldo.esposito@hotmail.com
 3842,55,Nicoletta,Morelli,1983-01-29,TDEPOJ57Z79C683Q,2019-05-26,623874,xmartino@montanari.com
 3843,56,Dylan,Conte,1992-01-23,AICPIT91J18K256V,2020-01-28,623875,ivonne.vitali@monti.org
-3844,42,Sibilla,Mazza,1994-10-06,JLNHAT64K37U758Z,2021-05-30,623876,benedetti.vera@libero.it
 3845,23,Celeste,Costa,1980-10-31,ENTHNY28X71M380X,2019-07-16,623877,eriberto.vitale@pellegrini.it
 3846,8,Damiana,Fabbri,1974-02-08,WPHWGO44A71W169X,2019-01-23,623878,caligola.serra@palmieri.org
 3848,75,Priamo,Vitale,1989-09-05,CGRHDW44H68O105R,2020-11-24,623880,leone.alighiero@colombo.it
-3850,47,Assia,Sartori,1994-08-12,LRHODM20I55B182U,2020-06-14,623882,ricci.claudia@gmail.com
 3851,30,Carmelo,Barone,1981-12-01,YYEVTY80E72W193N,2021-01-13,623883,mguerra@lombardi.org
 3852,48,Marieva,Silvestri,1987-11-18,BHZGAW27G25T080T,2021-04-24,623884,ocosta@ricci.it
 3854,11,Nunzia,Fontana,1978-12-03,KQTJIU91B53R662N,2019-01-24,623886,lidia.desantis@rizzo.net
@@ -2936,7 +2885,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3864,46,Piersilvio,Donati,1974-05-13,BWRUJM15O13P014R,2021-05-29,623896,vbernardi@martino.com
 3865,53,Romeo,Parisi,1992-09-24,DZZBLP33Q36H802P,2020-10-16,623897,cira76@libero.it
 3866,14,Abramo,Fabbri,1972-06-10,CQITTL83Y18D507G,2019-01-11,623898,bferraro@valentini.it
-3867,21,Evita,Marchetti,1994-09-01,JRIORL95K46H231A,2018-06-13,623899,fgrasso@damico.com
 3868,69,Clea,Bellini,1990-05-30,PDGXXN04L56G048C,2021-02-21,623900,yago.moretti@yahoo.it
 3869,31,Cleopatra,Parisi,1990-01-14,GQYAQJ97I01U403H,2018-08-10,623901,mdamico@yahoo.com
 3871,40,Gaetano,Barone,1990-01-31,ZRRAGH96T10Z527L,2019-12-09,623903,tbianco@yahoo.it
@@ -2967,7 +2915,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3900,66,Flaviana,Rossi,1984-03-23,KZCSUA06V62G607G,2019-03-23,623932,guerra.pablo@ferri.it
 3903,69,Iacopo,Rizzo,1991-12-19,ZBZCBI99W47T452S,2018-12-15,623935,rizzo.nayade@hotmail.com
 3904,63,Enrica,Grasso,1984-05-13,IXBGQF88I12R419T,2019-09-15,623936,luigi29@libero.it
-3905,44,Lucrezia,Rizzo,1994-11-27,ZONEYE80C85I936G,2021-01-05,623937,ricci.olimpia@santoro.com
 3906,49,Filomena,Caruso,1973-08-18,NEQDNW43Q92G660H,2020-10-19,623938,fferretti@gmail.com
 3907,54,Benedetta,Leone,1983-07-07,ETPQWE13I05F209A,2020-02-15,623939,soriana82@yahoo.it
 3909,26,Amedeo,Lombardi,1978-11-05,OSFXRC81W01S314A,2021-05-26,623941,carlo66@dangelo.com
@@ -3018,7 +2965,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 3965,45,Quarto,Bianco,1975-05-10,RFHAFZ16A03D968U,2019-09-26,623997,cassiopea.vitali@russo.com
 3967,69,Carmela,Donati,1992-07-21,ICEMWS60J97E298Z,2018-06-27,623999,ione17@hotmail.com
 3969,13,Genziana,Amato,1978-05-05,WJCHWP18F92E252N,2019-07-08,624001,dante.grassi@pellegrini.org
-3970,60,Clodovea,Martino,1994-09-21,UQLOCY06F81E761U,2018-10-30,624002,germano13@yahoo.it
 3971,67,Emilia,Coppola,1985-12-27,AZKLDB69K78X455A,2019-12-18,624003,zbattaglia@yahoo.it
 3972,25,Giacinto,Pellegrino,1983-07-14,WVBWQL81A40I061C,2020-08-11,624004,sorrentino.ruth@ferrara.it
 3973,24,Maristella,Valentini,1980-04-17,TFXJRB87S93Z682O,2019-09-18,624005,urizzo@yahoo.it
@@ -3184,7 +3130,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 4174,23,Sesto,"De Angelis",1971-11-08,LSVUSI72Z01X449X,2021-05-19,624206,penelope75@libero.it
 4176,47,Hector,Coppola,1992-07-17,ENWIHW92O44R877Q,2019-12-21,624208,lino.deangelis@gmail.com
 4177,73,Claudia,Valentini,1976-01-07,KWOFJD88C53D807V,2018-07-11,624209,morgana.bernardi@conte.com
-4178,8,Kristel,Fiore,1994-09-28,PNMUDT71B35Y542N,2019-09-24,624210,giacinta88@yahoo.it
 4179,48,Miriana,Monti,1987-05-29,WESQCZ99H55N219L,2019-01-31,624211,marchetti.loredana@hotmail.com
 4181,72,Tolomeo,Palumbo,1977-11-26,SPTZIF81A68D540O,2018-10-14,624213,qsorrentino@lombardi.org
 4182,56,Egidio,Benedetti,1992-02-22,MHEGPE82O29K692X,2018-07-09,624214,clea.riva@email.it
@@ -3225,7 +3170,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 4233,10,Ursula,Valentini,1972-07-19,MXSXNX17X86H894W,2021-05-18,624265,zelida.pagano@serra.org
 4234,70,Lucia,Ferrari,1978-12-20,HDSBLR50N07K815W,2019-06-28,624266,rinaldi.damiano@sanna.it
 4235,27,Ortensia,Ferri,1984-03-26,EWINFU79A59L860L,2021-06-06,624267,testa.mietta@email.it
-4236,9,Pericle,Lombardo,1994-12-25,RCCVYQ32D08A407E,2018-06-17,624268,orfeo.gentile@barbieri.it
 4237,23,Timothy,Vitali,1974-10-25,JAYVOX59D87Q193M,2021-05-17,624269,vitalba.negri@rossi.it
 4238,25,Costanzo,Esposito,1986-05-09,GAPLVU12I13W224H,2019-05-19,624270,ione02@rossetti.com
 4239,26,Aaron,"De Santis",1978-08-21,WABOWQ25B75K952Y,2019-08-10,624271,rizzo.egisto@giuliani.it
@@ -3335,7 +3279,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 4365,54,Lucia,Caruso,1987-05-15,ZJWOLA00O52Z987F,2019-11-08,624397,mvitali@gmail.com
 4366,55,Elda,Martino,1991-08-04,LJMOZU18P06P353L,2018-12-06,624398,sbattaglia@libero.it
 4367,9,Nicoletta,Parisi,1992-09-06,LJCAEQ70K58K517A,2020-10-26,624399,lorenzo.messina@libero.it
-4368,29,Assia,D'angelo,1994-11-04,BDBDPP44E03B058H,2019-08-09,624400,pdonati@fabbri.it
 4371,58,Soriana,Conte,1979-08-20,LIGHLG93W79M623P,2020-02-26,624403,ercole.valentini@gmail.com
 4372,42,Dindo,D'angelo,1984-05-19,EZEZQS60M11N421P,2020-10-24,624404,pellegrino.arturo@ricci.com
 4373,21,Diana,"De Santis",1989-05-04,GHLJSY82C24A973O,2020-02-10,624405,pricci@yahoo.it
@@ -3363,7 +3306,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 4402,18,Emidio,Montanari,1993-09-22,CUOPJC40B00S143H,2018-12-16,624434,zgallo@libero.it
 4403,31,Domiziano,Conti,1977-09-02,FBPVWF26I44A868Y,2020-07-08,624435,brizzi@grasso.it
 4404,11,Cristyn,Riva,1976-05-17,LWOSXE45M97A880M,2020-11-28,624436,conte.samira@email.it
-4405,32,Romeo,Rossi,1994-08-28,YNPZBQ03Z40L864C,2021-04-14,624437,elsa.leone@monti.it
 4409,67,Rosalba,Santoro,1976-05-31,YNURGU63G23R740Y,2021-05-23,624441,ecostantini@dangelo.com
 4412,42,Loris,Parisi,1988-01-09,MTTXYH30F58D555X,2020-04-28,624444,bconte@galli.it
 4414,59,Fortunata,Gallo,1979-11-10,WXQYSN14R01A699F,2019-12-07,624446,cristyn.giuliani@email.it
@@ -3381,7 +3323,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 4430,1,Pericle,Battaglia,1983-11-29,ZRVEJD65M92O923Y,2019-08-06,624462,palumbo.kris@montanari.it
 4431,68,Rosaria,Gatti,1979-07-07,HOCFKY77Z29Y543D,2021-03-17,624463,selvaggia.neri@colombo.it
 4432,1,Ubaldo,Villa,1972-08-24,KGYQTZ45K72W232V,2021-03-28,624464,sarita.costa@basile.it
-4434,16,Renato,Mariani,1994-11-25,QIBYMC21H80F462J,2019-03-03,624466,dmarini@ferrari.com
 4435,10,Naomi,Caputo,1993-12-20,ZVDNWU74Y50T220Y,2021-02-16,624467,ruggiero.miriam@ferri.com
 4436,8,Cassiopea,Santoro,1985-03-30,QTRNWP77J04H080F,2019-01-29,624468,zbattaglia@bernardi.com
 4438,30,Maika,Fontana,1971-11-14,YDWTAX99X55S570H,2020-07-25,624470,gmontanari@basile.com
@@ -3504,7 +3445,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 4585,36,Assia,Riva,1977-07-06,AUQWVC68Z37R871T,2020-04-05,624617,rmartino@conte.com
 4586,43,Secondo,Barbieri,1976-05-15,PUXSJF54N85E933E,2018-07-25,624618,fricci@gmail.com
 4587,46,Piccarda,Serra,1988-11-21,SOYEJG18U39C148S,2019-01-14,624619,artemide.mariani@email.it
-4588,21,Loredana,Sanna,1994-07-14,CTWJDQ03A84G479J,2020-02-04,624620,ccattaneo@yahoo.it
 4589,45,Naomi,"De rosa",1983-07-05,ZONIEO43H80J284Y,2020-09-19,624621,orlando.silverio@mancini.org
 4590,67,Clodovea,Pellegrino,1978-05-04,PGSCYR13C19J864W,2020-06-27,624622,tbasile@bellini.net
 4592,67,Benedetta,"De rosa",1984-06-16,GMQUTI58L68U758W,2019-11-22,624624,xmontanari@ferrari.net
@@ -3658,7 +3598,6 @@ id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_
 4806,16,Zelida,Bianco,1992-01-10,YGPYKR00M48U227J,2018-08-25,624838,brossetti@email.it
 4807,52,Edilio,Caruso,1975-04-03,ELRSKO20H71D864O,2020-09-15,624839,yago.benedetti@esposito.org
 4808,10,Gianleonardo,Bianco,1971-07-07,HLFJAN78J82D662K,2020-11-07,624840,hpellegrino@gmail.com
-4809,2,Lia,Cattaneo,1994-09-12,OHDRSB40E39P105H,2018-09-02,624841,zelida.conte@gmail.com
 4811,47,Trevis,Conte,1986-06-09,RQBETS83X00V132E,2020-04-30,624843,farina.cesidia@bianco.com
 4813,56,Ariel,Mancini,1977-07-29,BVWISQ03E42S444J,2018-07-02,624845,gregorio29@costantini.com
 4817,5,Genziana,Longo,1972-05-24,YSTVLA88U90I373J,2020-07-06,624849,wlombardi@hotmail.com

@@ -1,3 +1,7 @@
+-- Selezionare tutti i corsi di laurea magistrale (38)
+
+SELECT * FROM university.degrees WHERE level = "magistrale"
+
 id,department_id,name,level,address,email,website
 5,1,"Corso di Laurea Magistrale in Biologia evoluzionistica",magistrale,"Contrada Fiore 253",biologia-evoluzionistica@uni.it,www.biologia-evoluzionistica.uni.it
 6,1,"Corso di Laurea Magistrale in Biologia marina",magistrale,"Via Colombo 378 Piano 9",biologia-marina@uni.it,www.biologia-marina.uni.it

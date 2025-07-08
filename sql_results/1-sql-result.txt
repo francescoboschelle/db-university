@@ -1,3 +1,7 @@
+--  Selezionare tutti gli studenti nati nel 1990 (160)
+
+SELECT * FROM university.students WHERE YEAR(date_of_birth) = 1990
+
 id,degree_id,name,surname,date_of_birth,fiscal_code,enrolment_date,registration_number,email
 55,4,Lauro,Vitale,1990-01-30,BWOQAH56L35A201P,2018-10-22,620087,baldassarre.mancini@dangelo.com
 86,12,Matilde,Ruggiero,1990-11-17,UIFHBM73Q42E973M,2021-02-14,620118,mariagiulia18@gmail.com

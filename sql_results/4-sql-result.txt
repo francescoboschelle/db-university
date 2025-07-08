@@ -1,3 +1,7 @@
+-- Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
+
+SELECT * FROM university.courses WHERE period LIKE "I %" AND year = 1
+
 id,degree_id,name,description,period,year,cfu,website
 1,1,"provident aut non","Et dolorem optio nostrum quam. Nesciunt eos non molestiae deleniti. Earum amet nam minus porro aut corrupti.","I semestre",1,11,www.minima.uni.it
 2,1,"et doloremque omnis","Itaque quos aut repellat et amet et. Ipsum itaque laboriosam est earum unde id ea facilis. Eos placeat adipisci ipsam et. Ut ipsa ducimus sit sed ut provident facilis.","I semestre",1,4,NULL

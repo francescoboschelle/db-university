@@ -1,0 +1,21 @@
+/* 
+Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+*/
+
+SELECT *
+FROM course_teacher
+JOIN courses ON course_id = courses.id
+WHERE teacher_id = 44
+
+course_id,teacher_id,id,degree_id,name,description,period,year,cfu,website
+23,44,23,2,"impedit et eaque","Ut autem omnis repellendus officiis. Quia optio est voluptatum aspernatur.","I semestre",1,10,www.illum.uni.it
+155,44,155,10,"explicabo ab voluptas","Nam molestias iste sed error. Ullam veniam maxime dolorum hic aperiam. Similique sint numquam sequi voluptates at ipsa ea. Culpa nesciunt et et deleniti.","I semestre",1,3,www.consequuntur.uni.it
+170,44,170,11,"ullam ullam dignissimos","Perferendis voluptate et ratione sunt. Laborum harum sunt possimus porro veritatis. Iste incidunt ipsam laborum fugiat.","I semestre",1,9,NULL
+251,44,251,15,"aut pariatur a","Sequi sint expedita sint tempora enim et eum. Magnam et quaerat nostrum impedit est ut porro.","I semestre",3,5,www.nemo.uni.it
+489,44,489,29,"alias voluptatibus sed","Et minima molestiae eveniet. Iste est veritatis molestias et qui velit ut. Facilis fuga numquam et ducimus qui amet. Dolores animi cumque suscipit repellendus facere.","II semestre",1,7,NULL
+601,44,601,35,"facilis adipisci provident","Et aut id aut officia. Doloremque quaerat sit et architecto. Facere nulla dolor sit illum quae laborum. Reiciendis iure nihil tempora.","I semestre",1,15,www.consequatur.uni.it
+725,44,725,41,"doloribus nemo iure","Ea quae porro laudantium ut. Explicabo et assumenda excepturi. Ex ea necessitatibus aliquid delectus eius et voluptatem ratione. Consequatur saepe voluptate id ad asperiores molestiae quia.","I semestre",2,12,NULL
+766,44,766,43,"et quasi enim","Et ipsa enim animi dolor. Dolore et dicta sunt. Fuga odit veritatis numquam earum est. Deserunt possimus eos sint quibusdam nobis autem.","I semestre",2,8,NULL
+1016,44,1016,57,"facilis pariatur qui","Dolores unde ex suscipit sint quia. A debitis dolore voluptatem consequuntur. Ut voluptate sapiente qui voluptas.","I semestre",2,6,NULL
+1017,44,1017,57,"dolor repellat dignissimos","Aut est id qui pariatur error. Nobis sint eum ut et. Dignissimos placeat totam sed. Cupiditate doloribus qui ipsam possimus porro. Laborum aspernatur sed sit exercitationem laboriosam.","II semestre",2,12,www.dolores.uni.it
+1259,44,1259,72,"magni magni omnis","Maxime est est vitae. Natus ut reiciendis veniam. Voluptas dolor accusamus harum sapiente occaecati dolorum iusto.","I semestre",1,5,www.ea.uni.it

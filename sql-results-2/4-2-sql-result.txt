@@ -1,0 +1,21 @@
+/* 
+Contare quanti corsi di laurea ci sono per ogni dipartimento
+*/
+
+SELECT COUNT(id)
+FROM degrees
+GROUP BY department_id
+
+COUNT(id)
+10
+4
+4
+9
+4
+6
+7
+8
+5
+8
+3
+7

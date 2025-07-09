@@ -1,0 +1,9 @@
+/* 
+Calcolare la media dei voti di ogni appello d'esame
+*/
+
+SELECT AVG(vote)
+FROM exam_student
+
+AVG(vote)
+17.9573
